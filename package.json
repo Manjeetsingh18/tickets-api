@@ -8,12 +8,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node --require dotenv/config ./dist/index.js",
+    "start": "node --require dotenv/config ./dist/index.js",
     "build": "tsc",
     "dev": "tsc --watch & nodemon --require dotenv/config dist",
     "test": "mocha --require dotenv/config dist/**/*.spec.js",
     "lint": "./eslint src --ext ts",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
